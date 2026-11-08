@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "border-subtle": "#E2E8E5", "surface-bg": "#F7F9F8", "on-tertiary-fixed-variant": "#005140", "on-surface": "#121e1a", "primary-container": "#147d65", "on-primary-fixed": "#002018", "on-background": "#121e1a", "surface-container": "#e3f1e9", "primary": "#00624e", "on-primary-container": "#c5ffea", "primary-fixed": "#98f4d6", "inverse-on-surface": "#e6f4ec", "on-secondary": "#ffffff", "tertiary-fixed": "#a9f1d9", "status-error": "#C0392B", "surface-container-high": "#deebe4", "surface": "#effdf5", "error": "#ba1a1a", "on-primary-fixed-variant": "#005140", "geofence-pulse": "#147D6526", "on-tertiary-fixed": "#002018", "outline-variant": "#bdc9c3", "on-secondary-fixed": "#001c3a", "on-primary": "#ffffff", "secondary-fixed-dim": "#a5c8ff", "tertiary-fixed-dim": "#8dd4bd", "surface-tint": "#006b56", "inverse-surface": "#27332e", "on-error": "#ffffff", "error-container": "#ffdad6", "primary-fixed-dim": "#7cd7bb", "surface-container-highest": "#d8e6de", "surface-container-low": "#e9f7ef", "on-error-container": "#93000a", "status-success": "#23864A", "surface-card": "#FFFFFF", "status-warning": "#B7791F", "secondary-fixed": "#d4e3ff", "inverse-primary": "#7cd7bb", "surface-bright": "#effdf5", "outline": "#6e7a74", "on-secondary-fixed-variant": "#004786", "on-surface-variant": "#3e4945", "secondary": "#005faf", "surface-variant": "#d8e6de", "tertiary-container": "#347b67", "background": "#effdf5", "surface-dim": "#cfddd6", "text-primary": "#17211D", "on-secondary-container": "#003567", "on-tertiary-container": "#c8ffeb", "tertiary": "#146250", "surface-container-lowest": "#ffffff", "text-secondary": "#64716B", "on-tertiary": "#ffffff", "secondary-container": "#54a0fe" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "1.5rem", "gutter-sm": "0.75rem", "margin-lg": "1.5rem", "space-sm": "0.5rem", "space-md": "0.75rem", "margin": "1rem", "space-xs": "0.25rem", "space-lg": "1rem", "gutter": "1rem" }, "fontFamily": { "headline-sm": ["Roboto Flex"], "label-lg": ["Roboto Flex"], "label-sm": ["Roboto Flex"], "body-md": ["Roboto Flex"], "headline-lg": ["Roboto Flex"], "headline-md": ["Roboto Flex"], "title-sm": ["Roboto Flex"], "body-lg": ["Roboto Flex"], "body-sm": ["Roboto Flex"], "title-md": ["Roboto Flex"], "label-md": ["Roboto Flex"] }, "fontSize": { "headline-sm": ["18px", {"lineHeight": "24px", "fontWeight": "600"}], "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}], "label-sm": ["11px", {"lineHeight": "14px", "fontWeight": "500"}], "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}], "headline-lg": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}], "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}], "title-sm": ["15px", {"lineHeight": "20px", "fontWeight": "600"}], "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}], "body-sm": ["13px", {"lineHeight": "18px", "fontWeight": "400"}], "title-md": ["16px", {"lineHeight": "22px", "fontWeight": "600"}], "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="Logo Sehat Bersama" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBt2XyjvHwcsE4AOoi6ZgzgZ8_Gp2-vTFA7BjawZvQdibPn5s-F_aurVP5YZjfiC76uijfI1Ub2Lgw3rSpOznCSf2g-4yduj1Pk3gPyShAoxCZA_NzrIAveUi9pqF-YnttFxOu_jA5_jWlKKo1rk39DESpGrdIj7ukyCoj3jIYPtilSlQ6kvQiG0VD2NBISk74PIZqBikX4NedUa-7xdJVXtvTfvkB4epVyhRJ4D6s"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight">Sehat Bersama</span><span class="font-label-sm text-label-sm text-text-secondary">Peta</span></div></div><div class="flex items-center gap-space-sm"><button aria-label="Notifikasi" class="w-11 h-11 rounded-full flex items-center justify-center text-text-secondary hover:text-primary hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface"><div class="flex flex-col w-full pb-6">
+<!-- Top Greeting & Context Card -->
+<div class="px-margin pt-4 pb-2">
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary shadow-sm">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-text-primary">Fasilitas Favorit</span>
+<span class="bg-primary/10 text-primary font-label-sm text-label-sm px-2 py-0.5 rounded-full" id="fav-counter">4 Disimpan</span>
+</div>
+<span class="font-body-sm text-body-sm text-text-secondary">Akses cepat offline &amp; pantauan jarak dekat</span>
+</div>
+</div>
+<button aria-label="Sinkronisasi status" class="w-9 h-9 rounded-full bg-surface-card text-text-secondary hover:text-primary active:scale-95 flex items-center justify-center transition-all shadow-sm" id="btn-sync-all">
+<span class="material-symbols-outlined text-[19px]">sync</span>
+</button>
+</div>
+</div>
+<!-- Search & Filter Controls -->
+<div class="px-margin py-2 flex flex-col gap-2.5">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-text-secondary text-[20px]">search</span>
+<input class="w-full h-11 pl-11 pr-10 bg-surface-card rounded-xl font-body-md text-body-md text-text-primary placeholder:text-text-secondary shadow-sm focus:outline-none focus:ring-0" id="search-input" placeholder="Cari faskes favorit Anda..." type="text"/>
+<button class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-text-secondary hover:text-text-primary" id="clear-search">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+<!-- Category Filter Chips -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5" id="chip-container">
+<button class="filter-chip active flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-sm transition-all whitespace-nowrap" data-cat="all">
+<span>Semua</span>
+<span class="bg-white/20 text-on-primary text-[10px] px-1.5 py-0.2 rounded-full font-label-sm">4</span>
+</button>
+<button class="filter-chip flex items-center gap-1 px-3.5 py-1.5 rounded-full bg-surface-card text-text-secondary font-label-md text-label-md shadow-sm hover:text-primary transition-all whitespace-nowrap" data-cat="rs">
+<span class="material-symbols-outlined text-[16px]">local_hospital</span>
+<span>Rumah Sakit</span>
+</button>
+<button class="filter-chip flex items-center gap-1 px-3.5 py-1.5 rounded-full bg-surface-card text-text-secondary font-label-md text-label-md shadow-sm hover:text-primary transition-all whitespace-nowrap" data-cat="puskesmas">
+<span class="material-symbols-outlined text-[16px]">medical_services</span>
+<span>Puskesmas</span>
+</button>
+<button class="filter-chip flex items-center gap-1 px-3.5 py-1.5 rounded-full bg-surface-card text-text-secondary font-label-md text-label-md shadow-sm hover:text-primary transition-all whitespace-nowrap" data-cat="klinik">
+<span class="material-symbols-outlined text-[16px]">health_and_safety</span>
+<span>Klinik</span>
+</button>
+</div>
+</div>
+<!-- Distance Proximity Banner (Geofence Cue) -->
+<div class="px-margin pt-1 pb-2">
+<div class="bg-surface-container rounded-xl p-3 flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">radar</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-text-primary">Mode Pantau Geofence Aktif</span>
+<span class="font-body-sm text-body-sm text-text-secondary">Notifikasi otomatis saat masuk radius 500m</span>
+</div>
+</div>
+<div class="w-2 h-2 rounded-full bg-status-success animate-ping"></div>
+</div>
+</div>
+<!-- Cards List Container -->
+<div class="px-margin flex flex-col gap-3.5 mt-1" id="favorites-list">
+<!-- Card 1: RSUD Kabupaten X -->
+<article class="facility-card relative bg-surface-card rounded-xl p-space-md shadow-sm flex flex-col gap-3 transition-all" data-category="rs" data-id="rsud-kabupaten-x">
+<div class="flex items-start gap-3">
+<!-- Thumbnail -->
+<div class="w-20 h-20 rounded-lg overflow-hidden shrink-0 bg-surface-container relative">
+<img class="w-full h-full object-cover" data-alt="Modern Indonesian regional public general hospital RSUD facade with emergency ambulance bay entrance under clear morning sky, manicured tropical green hedges, clean civil architecture style in soft green tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZ0QM6-UrbxBHh-vwbP8FkuyCjdB_pvKV6L5iRMzZtzpXOIWSjGC-XKQHwxuT3XQEKwa1ZnqCVjP0eWOxwQfz76WqrDPCikQE5F5i6C_KZAgE3r98Vo87K6W1pssP-mnw9lUwgtmthFubgmJYPZMQCa6khEGeSInKYjUwE2T-mFGXF9jHghkTfpXboewPUKcy2rsYDVe9gDu3I4yndAyFjazQSd-k3fzn-gB81wfA"/>
+<div class="absolute bottom-1 left-1 bg-surface/90 backdrop-blur-sm px-1.5 py-0.5 rounded text-[10px] font-label-sm text-primary font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[11px]">star</span> 4.8
+          </div>
+</div>
+<!-- Info -->
+<div class="flex-1 min-w-0">
+<div class="flex items-start justify-between gap-1">
+<div>
+<span class="bg-secondary/10 text-secondary font-label-sm text-label-sm px-1.5 py-0.5 rounded">Rumah Sakit Umum</span>
+<h2 class="font-title-md text-title-md text-text-primary truncate mt-1">RSUD Kabupaten X</h2>
+</div>
+<!-- Favorite Toggle Action -->
+<button aria-label="Hapus favorit" class="btn-toggle-fav text-status-error p-1 -mr-1 hover:scale-110 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="flex items-center gap-2 mt-1.5 font-body-sm text-body-sm text-text-secondary">
+<span class="flex items-center gap-0.5 text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[15px]">near_me</span> 1,2 km
+            </span>
+<span>•</span>
+<span class="flex items-center gap-1 text-status-success font-label-md text-label-md">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success inline-block"></span> Buka 24 Jam
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary truncate mt-0.5">Jl. Raya Sukamaju No. 10, Desa Sukamaju</p>
+</div>
+</div>
+<!-- Service Badges -->
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="bg-surface-container-low text-text-secondary font-label-sm text-label-sm px-2.5 py-1 rounded-md">IGD 24 Jam</span>
+<span class="bg-surface-container-low text-text-secondary font-label-sm text-label-sm px-2.5 py-1 rounded-md">Rawat Inap</span>
+<span class="bg-surface-container-low text-text-secondary font-label-sm text-label-sm px-2.5 py-1 rounded-md">Poliklinik</span>
+<span class="bg-surface-container-low text-text-secondary font-label-sm text-label-sm px-2 py-1 rounded-md">+2 Layanan</span>
+</div>
+<!-- Quick Action Buttons -->
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 h-10 rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center gap-1.5 shadow-sm active:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">directions</span>
+<span>Mulai Navigasi</span>
+</button>
+<button class="h-10 px-3.5 rounded-lg bg-surface-container text-primary font-label-md text-label-md flex items-center justify-center gap-1 hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px]">info</span>
+<span>Detail</span>
+</button>
+</div>
+</article>
+<!-- Card 2: Puskesmas Sukamaju -->
+<article class="facility-card relative bg-surface-card rounded-xl p-space-md shadow-sm flex flex-col gap-3 transition-all" data-category="puskesmas" data-id="puskesmas-sukamaju">
+<div class="flex items-start gap-3">
+<!-- Thumbnail -->
+<div class="w-20 h-20 rounded-lg overflow-hidden shrink-0 bg-surface-container relative">
+<img class="w-full h-full object-cover" data-alt="Government communal health center Puskesmas building in rural Indonesia, bright sunny day, green roof tiles, welcoming front desk clinic lobby, community health center atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0vdImKR2XVk40ZzsFt_0hLVAe8UNaQhYbQbf9k1Cen-g2oT1KPc0kWde9G9pjFKm46NJT4RWCoxeRVdadmR54k5SKZJSd9TL8uQEA5U451saT96AWZE-QI9jUURuE7n4BMHo4XQR4ZFCwQjFZgpSlem8atiPRB_MYRDU0XFYK211dD5DuHEfl-vb2RswxJXlD-ex7SUfwpFntW-Nn8UnlyhSAxSnlLRl3oExPkLY"/>
+<div class="absolute bottom-1 left-1 bg-surface/90 backdrop-blur-sm px-1.5 py-0.5 rounded text-[10px] font-label-sm text-primary font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[11px]">star</span> 4.3
+          </div>
+</div>
+<!-- Info -->
+<div class="flex-1 min-w-0">
+<div class="flex items-start justify-between gap-1">
+<div>
+<span class="bg-primary-container/10 text-primary-container font-label-sm text-label-sm px-1.5 py-0.5 rounded">Puskesmas Pembina</span>
+<h2 class="font-title-md text-title-md text-text-primary truncate mt-1">Puskesmas Sukamaju</h2>
+</div>
+<!-- Favorite Toggle Action -->
+<button aria-label="Hapus favorit" class="btn-toggle-fav text-status-error p-1 -mr-1 hover:scale-110 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="flex items-center gap-2 mt-1.5 font-body-sm text-body-sm text-text-secondary">
+<span class="flex items-center gap-0.5 text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[15px]">near_me</span> 2,4 km
+            </span>
+<span>•</span>
+<span class="flex items-center gap-1 text-status-warning font-label-md text-label-md">
+<span class="w-1.5 h-1.5 rounded-full bg-status-warning inline-block"></span> Tutup 14:00 WIB
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary truncate mt-0.5">Jl. Desa Makmur No. 4, Dusun Tengah</p>
+</div>
+</div>
+<!-- Service Badges -->
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="bg-surface-container-low text-text-secondary font-label-sm text-label-sm px-2.5 py-1 rounded-md">Poli Umum</span>
+<span class="bg-surface-container-low text-text-secondary font-label-sm text-label-sm px-2.5 py-1 rounded-md">KIA &amp; KB</span>
+<span class="bg-surface-container-low text-text-secondary font-label-sm text-label-sm px-2.5 py-1 rounded-md">Imunisasi Balita</span>
+<span class="bg-surface-container-low text-text-secondary font-label-sm text-label-sm px-2 py-1 rounded-md">Laboratorium</span>
+</div>
+<!-- Quick Action Buttons -->
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 h-10 rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center gap-1.5 shadow-sm active:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">directions</span>
+<span>Mulai Navigasi</span>
+</button>
+<button class="h-10 px-3.5 rounded-lg bg-surface-container text-primary font-label-md text-label-md flex items-center justify-center gap-1 hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px]">info</span>
+<span>Detail</span>
+</button>
+</div>
+</article>
+<!-- Card 3: Klinik Sehat Mandiri -->
+<article class="facility-card relative bg-surface-card rounded-xl p-space-md shadow-sm flex flex-col gap-3 transition-all" data-category="klinik" data-id="klinik-sehat-mandiri">
+<div class="flex items-start gap-3">
+<!-- Thumbnail -->
+<div class="w-20 h-20 rounded-lg overflow-hidden shrink-0 bg-surface-container relative">
+<img class="w-full h-full object-cover" data-alt="Modern clean private suburban healthcare clinic building exterior with glass entrance doors, pharmacy counter signage, friendly Indonesian neighbourhood environment with tropical trees" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYya1sZCb_et_ukRRBdfw-1B3SC0DFuuH2wlPn_i1r7LcBcGcXVcy_VKqIK11ge614XMmb3ZHLinHsGTB5KS_1qmzHzeNC2ws1g_bymIxZUwLj9Y8UXpTHAksrXChyTfkBYZKzW7bwwhNLxFetvIbhF4yLf30_MitE5yDVI0jSQlT3-dGw1Tt7NlitRkyVLcJ1aegQ9gIkf9PHcVRQJG41GI4W5QywnY07Q42cokA"/>
+<div class="absolute bottom-1 left-1 bg-surface/90 backdrop-blur-sm px-1.5 py-0.5 rounded text-[10px] font-label-sm text-primary font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[11px]">star</span> 4.2
+          </div>
+</div>
+<!-- Info -->
+<div class="flex-1 min-w-0">
+<div class="flex items-start justify-between gap-1">
+<div>
+<span class="bg-secondary/10 text-secondary font-label-sm text-label-sm px-1.5 py-0.5 rounded">Klinik Pratama</span>
+<h2 class="font-title-md text-title-md text-text-primary truncate mt-1">Klinik Sehat Mandiri</h2>
+</div>
+<!-- Favorite Toggle Action -->
+<button aria-label="Hapus favorit" class="btn-toggle-fav text-status-error p-1 -mr-1 hover:scale-110 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="flex items-center gap-2 mt-1.5 font-body-sm text-body-sm text-text-secondary">
+<span class="flex items-center gap-0.5 text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[15px]">near_me</span> 3,1 km
+            </span>
+<span>•</span>
+<span class="flex items-center gap-1 text-status-success font-label-md text-label-md">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success inline-block"></span> Buka s/d 21:00
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary truncate mt-0.5">Komp. Ruko Sejahtera Blok B-12</p>
+</div>
+</div>
+<!-- Service Badges -->
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="bg-surface-container-low text-text-secondary font-label-sm text-label-sm px-2.5 py-1 rounded-md">Dokter Umum</span>
+<span class="bg-surface-container-low text-text-secondary font-label-sm text-label-sm px-2.5 py-1 rounded-md">Poli Gigi</span>
+<span class="bg-surface-container-low text-text-secondary font-label-sm text-label-sm px-2.5 py-1 rounded-md">Farmasi 24 Jam</span>
+</div>
+<!-- Quick Action Buttons -->
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 h-10 rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center gap-1.5 shadow-sm active:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">directions</span>
+<span>Mulai Navigasi</span>
+</button>
+<button class="h-10 px-3.5 rounded-lg bg-surface-container text-primary font-label-md text-label-md flex items-center justify-center gap-1 hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px]">info</span>
+<span>Detail</span>
+</button>
+</div>
+</article>
+<!-- Card 4: RS Harapan Bunda -->
+<article class="facility-card relative bg-surface-card rounded-xl p-space-md shadow-sm flex flex-col gap-3 transition-all" data-category="rs" data-id="rs-harapan-bunda">
+<div class="flex items-start gap-3">
+<!-- Thumbnail -->
+<div class="w-20 h-20 rounded-lg overflow-hidden shrink-0 bg-surface-container relative">
+<img class="w-full h-full object-cover" data-alt="Contemporary private hospital building RS Harapan Bunda multi-story architecture with medical cross sign, modern glass curtain walls, ambulance parking bay in Indonesia" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy1YCd5SoZdzeNfvfCNZLLqWusCVuAnKizLIIrpgDNBh9hvQIuTIwY0vwqVdiOfQHKSrrd2_7Af_f1wE1qjZW7wn0f0V-gIgengSumgQQS5sBEUwWdo_doIlXK3PGoJS6yYvktMC5LpqhDbmhVtD_R9URiUrqTi1p0gtH_w9gNBeCJAZjht92rQ_tlKQzXrIG5qMC91KpNMfcpx162XNgEYsJ2s5u4Kf0ynEtA7t4"/>
+<div class="absolute bottom-1 left-1 bg-surface/90 backdrop-blur-sm px-1.5 py-0.5 rounded text-[10px] font-label-sm text-primary font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[11px]">star</span> 4.6
+          </div>
+</div>
+<!-- Info -->
+<div class="flex-1 min-w-0">
+<div class="flex items-start justify-between gap-1">
+<div>
+<span class="bg-secondary/10 text-secondary font-label-sm text-label-sm px-1.5 py-0.5 rounded">RS Swasta Rujukan</span>
+<h2 class="font-title-md text-title-md text-text-primary truncate mt-1">RS Harapan Bunda</h2>
+</div>
+<!-- Favorite Toggle Action -->
+<button aria-label="Hapus favorit" class="btn-toggle-fav text-status-error p-1 -mr-1 hover:scale-110 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="flex items-center gap-2 mt-1.5 font-body-sm text-body-sm text-text-secondary">
+<span class="flex items-center gap-0.5 text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[15px]">near_me</span> 4,8 km
+            </span>
+<span>•</span>
+<span class="flex items-center gap-1 text-status-success font-label-md text-label-md">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success inline-block"></span> Buka 24 Jam
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary truncate mt-0.5">Jl. Pemuda Poros Selatan No. 88</p>
+</div>
+</div>
+<!-- Service Badges -->
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="bg-surface-container-low text-text-secondary font-label-sm text-label-sm px-2.5 py-1 rounded-md">IGD 24 Jam</span>
+<span class="bg-surface-container-low text-text-secondary font-label-sm text-label-sm px-2.5 py-1 rounded-md">Spesialis Anak</span>
+<span class="bg-surface-container-low text-text-secondary font-label-sm text-label-sm px-2.5 py-1 rounded-md">Radiologi</span>
+<span class="bg-surface-container-low text-text-secondary font-label-sm text-label-sm px-2.5 py-1 rounded-md">Bedah Sentral</span>
+</div>
+<!-- Quick Action Buttons -->
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 h-10 rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center gap-1.5 shadow-sm active:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">directions</span>
+<span>Mulai Navigasi</span>
+</button>
+<button class="h-10 px-3.5 rounded-lg bg-surface-container text-primary font-label-md text-label-md flex items-center justify-center gap-1 hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px]">info</span>
+<span>Detail</span>
+</button>
+</div>
+</article>
+</div>
+<!-- Interactive Empty State (Shown when search/filter yields 0 or all removed) -->
+<div class="hidden px-margin py-10 flex-col items-center justify-center text-center" id="empty-state">
+<div class="w-20 h-20 rounded-full bg-surface-container flex items-center justify-center text-primary mb-3">
+<span class="material-symbols-outlined text-[36px]">bookmark_heart</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary">Tidak Ada Fasilitas Ditemukan</h3>
+<p class="font-body-md text-body-md text-text-secondary max-w-[260px] mt-1 mb-5">
+      Belum ada faskes tersimpan yang cocok dengan filter atau kata kunci Anda.
+    </p>
+<button class="px-5 py-2.5 rounded-xl bg-primary text-on-primary font-label-md text-label-md shadow-sm" id="btn-reset-filters">
+      Tampilkan Semua Favorit
+    </button>
+</div>
+<!-- Helpful Offline Sync Notice -->
+<div class="px-margin pt-4">
+<div class="bg-surface-card rounded-xl p-3.5 shadow-sm flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">offline_pin</span>
+</div>
+<div class="flex-1 min-w-0">
+<span class="font-label-md text-label-md text-text-primary block">Tersimpan di Penyimpanan Lokal</span>
+<span class="font-body-sm text-body-sm text-text-secondary block truncate">Dapat dibuka saat jaringan seluler lemah di pelosok</span>
+</div>
+</div>
+</div>
+<!-- Toast Notification Pill for Removal/Restoration -->
+<div class="fixed bottom-20 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface px-4 py-2.5 rounded-full shadow-lg font-body-sm text-body-sm flex items-center gap-2 transition-all opacity-0 pointer-events-none translate-y-3 z-50" id="toast">
+<span class="material-symbols-outlined text-[18px] text-primary-fixed" id="toast-icon">check_circle</span>
+<span id="toast-text">Fasilitas dihapus dari favorit</span>
+<button class="text-primary-fixed font-label-md text-label-md underline ml-1 hover:text-white" id="toast-undo">Batal</button>
+</div>
+</div>
+<script>
+(function() {
+  // Sync tab status in bottom navigation shell
+  const allTabs = document.querySelectorAll('nav a');
+  allTabs.forEach(tab => {
+    if (tab.getAttribute('data-path') === 'favorit') {
+      tab.classList.remove('text-on-surface-variant');
+      tab.classList.add('text-primary');
+      const icon = tab.querySelector('.material-symbols-outlined');
+      if (icon) icon.style.fontVariationSettings = "'FILL' 1";
+    } else {
+      tab.classList.remove('text-primary');
+      tab.classList.add('text-on-surface-variant');
+      const icon = tab.querySelector('.material-symbols-outlined');
+      if (icon) icon.style.fontVariationSettings = "'FILL' 0";
+    }
+  });
+
+  const cardsList = document.getElementById('favorites-list');
+  const emptyState = document.getElementById('empty-state');
+  const chipContainer = document.getElementById('chip-container');
+  const searchInput = document.getElementById('search-input');
+  const clearSearch = document.getElementById('clear-search');
+  const favCounter = document.getElementById('fav-counter');
+  const toast = document.getElementById('toast');
+  const toastText = document.getElementById('toast-text');
+  const toastUndo = document.getElementById('toast-undo');
+  const resetFiltersBtn = document.getElementById('btn-reset-filters');
+
+  let currentCategory = 'all';
+  let lastRemovedCard = null;
+  let toastTimer = null;
+
+  function showToast(message, canUndo = true) {
+    clearTimeout(toastTimer);
+    toastText.textContent = message;
+    toastUndo.style.display = canUndo ? 'inline-block' : 'none';
+    toast.classList.remove('opacity-0', 'translate-y-3', 'pointer-events-none');
+    toast.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto');
+
+    toastTimer = setTimeout(() => {
+      hideToast();
+    }, 3500);
+  }
+
+  function hideToast() {
+    toast.classList.add('opacity-0', 'translate-y-3', 'pointer-events-none');
+    toast.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
+  }
+
+  function updateCounts() {
+    const visibleCards = Array.from(document.querySelectorAll('.facility-card')).filter(card => !card.classList.contains('hidden'));
+    const totalCards = document.querySelectorAll('.facility-card').length;
+    favCounter.textContent = totalCards + ' Disimpan';
+    
+    if (visibleCards.length === 0) {
+      emptyState.classList.remove('hidden');
+      emptyState.classList.add('flex');
+    } else {
+      emptyState.classList.add('hidden');
+      emptyState.classList.remove('flex');
+    }
+  }
+
+  function applyFilters() {
+    const query = searchInput.value.toLowerCase().trim();
+    const cards = document.querySelectorAll('.facility-card');
+
+    cards.forEach(card => {
+      const title = card.querySelector('h2').textContent.toLowerCase();
+      const cat = card.getAttribute('data-category');
+      const matchesSearch = title.includes(query);
+      const matchesCat = (currentCategory === 'all' || cat === currentCategory);
+
+      if (matchesSearch && matchesCat) {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+
+    updateCounts();
+  }
+
+  // Filter chips click
+  chipContainer.addEventListener('click', (e) => {
+    const chip = e.target.closest('.filter-chip');
+    if (!chip) return;
+
+    document.querySelectorAll('.filter-chip').forEach(c => {
+      c.classList.remove('active', 'bg-primary', 'text-on-primary');
+      c.classList.add('bg-surface-card', 'text-text-secondary');
+    });
+
+    chip.classList.add('active', 'bg-primary', 'text-on-primary');
+    chip.classList.remove('bg-surface-card', 'text-text-secondary');
+
+    currentCategory = chip.getAttribute('data-cat');
+    applyFilters();
+  });
+
+  // Search input events
+  searchInput.addEventListener('input', () => {
+    if (searchInput.value.length > 0) {
+      clearSearch.classList.remove('hidden');
+    } else {
+      clearSearch.classList.add('hidden');
+    }
+    applyFilters();
+  });
+
+  clearSearch.addEventListener('click', () => {
+    searchInput.value = '';
+    clearSearch.classList.add('hidden');
+    applyFilters();
+  });
+
+  resetFiltersBtn.addEventListener('click', () => {
+    searchInput.value = '';
+    clearSearch.classList.add('hidden');
+    currentCategory = 'all';
+    document.querySelectorAll('.filter-chip').forEach(c => {
+      if (c.getAttribute('data-cat') === 'all') {
+        c.classList.add('active', 'bg-primary', 'text-on-primary');
+        c.classList.remove('bg-surface-card', 'text-text-secondary');
+      } else {
+        c.classList.remove('active', 'bg-primary', 'text-on-primary');
+        c.classList.add('bg-surface-card', 'text-text-secondary');
+      }
+    });
+    applyFilters();
+  });
+
+  // Toggle favorite / remove handler
+  cardsList.addEventListener('click', (e) => {
+    const favBtn = e.target.closest('.btn-toggle-fav');
+    if (!favBtn) return;
+
+    const card = favBtn.closest('.facility-card');
+    const faskesName = card.querySelector('h2').textContent;
+    
+    // Animate removal
+    card.classList.add('scale-95', 'opacity-0');
+    setTimeout(() => {
+      lastRemovedCard = { element: card, nextSibling: card.nextSibling };
+      card.remove();
+      updateCounts();
+      showToast(faskesName + ' dihapus dari favorit');
+    }, 200);
+  });
+
+  // Undo button
+  toastUndo.addEventListener('click', () => {
+    if (lastRemovedCard && lastRemovedCard.element) {
+      if (lastRemovedCard.nextSibling) {
+        cardsList.insertBefore(lastRemovedCard.element, lastRemovedCard.nextSibling);
+      } else {
+        cardsList.appendChild(lastRemovedCard.element);
+      }
+      setTimeout(() => {
+        lastRemovedCard.element.classList.remove('scale-95', 'opacity-0');
+      }, 50);
+      lastRemovedCard = null;
+      hideToast();
+      applyFilters();
+    }
+  });
+
+  // Sync button micro-interaction
+  const syncBtn = document.getElementById('btn-sync-all');
+  if (syncBtn) {
+    syncBtn.addEventListener('click', () => {
+      syncBtn.classList.add('animate-spin');
+      setTimeout(() => {
+        syncBtn.classList.remove('animate-spin');
+        showToast('Status faskes favorit telah diperbarui!', false);
+      }, 700);
+    });
+  }
+})();
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(23,33,29,0.06)]" data-active-classes="text-primary font-label-md"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[64px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="beranda" href="#"><span class="material-symbols-outlined text-[24px]">home</span><span class="font-label-sm text-label-sm mt-0.5">Beranda</span></a><a class="flex flex-col items-center justify-center min-w-[64px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="peta" href="#"><span class="material-symbols-outlined text-[24px]">map</span><span class="font-label-sm text-label-sm mt-0.5">Peta</span></a><a class="flex flex-col items-center justify-center min-w-[64px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="favorit" href="#"><span class="material-symbols-outlined text-[24px]">favorite</span><span class="font-label-sm text-label-sm mt-0.5">Favorit</span></a><a class="flex flex-col items-center justify-center min-w-[64px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="profil" href="#"><span class="material-symbols-outlined text-[24px]">person</span><span class="font-label-sm text-label-sm mt-0.5">Profil</span></a></div></nav></body></html>

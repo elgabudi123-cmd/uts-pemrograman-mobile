@@ -1,0 +1,41 @@
+[
+  {
+    "id": "facility-simulation-001",
+    "name": "RSUD Kabupaten X",
+    "type": "hospital",
+    "address": "Alamat simulasi, Kabupaten X",
+    "latitude": -6.2000,
+    "longitude": 106.8000,
+    "phone": null,
+    "openingHours": null,
+    "services": ["IGD", "Poliklinik", "Rawat Inap"],
+    "geofenceRadiusMeters": 500,
+    "isSimulation": true
+  },
+  {
+    "id": "facility-simulation-002",
+    "name": "Puskesmas Sukamaju",
+    "type": "puskesmas",
+    "address": "Alamat simulasi, Desa Sukamaju, Kabupaten X",
+    "latitude": -6.2050,
+    "longitude": 106.8060,
+    "phone": null,
+    "openingHours": null,
+    "services": ["Poli Umum", "KIA", "Imunisasi"],
+    "geofenceRadiusMeters": 500,
+    "isSimulation": true
+  },
+  {
+    "id": "facility-simulation-003",
+    "name": "Klinik Sehat Mandiri",
+    "type": "clinic",
+    "address": "Alamat simulasi, Kabupaten X",
+    "latitude": -6.1940,
+    "longitude": 106.7920,
+    "phone": null,
+    "openingHours": null,
+    "services": ["Umum", "Gigi", "Laboratorium"],
+    "geofenceRadiusMeters": 500,
+    "isSimulation": true
+  }
+]
